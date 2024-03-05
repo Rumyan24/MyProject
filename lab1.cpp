@@ -124,7 +124,7 @@ int main() {
     // Добавление элементов в список
     DobavitVnachalo(golova, 1, "Monarh", 10); // Добавление в начало списка
     DobavitVkonec(golova, 2, "Lastochkin hvost", 5); // Добавление в конец списка
-    DobavitPoIndeksu(golova, 1, 3, "Goluboy Morfo", 7); // Добавление по индексу (в середину списка)
+    DobavitPoIndeksu(golova, 1, 3, "Goluboy", 7); // Добавление по индексу (в середину списка)
 
     std::cout << "Spisok posle dobavleniya elementov:" << std::endl;
     for (Babochka* iter = golova; iter != nullptr; iter = iter->sleduyushchiy) {
@@ -132,7 +132,7 @@ int main() {
     }
 
     // Обновление элемента по индексу
-    ObnovitPoIndeksu(golova, 1, 3, "Goluboy Morfo Obnovlennyi", 8);
+    ObnovitPoIndeksu(golova, 1, 3, "Goluboy Obnovlennyi", 8);
     std::cout << "Spisok posle obnovleniya elementa:" << std::endl;
     for (Babochka* iter = golova; iter != nullptr; iter = iter->sleduyushchiy) {
         std::cout << iter->id << " - " << iter->vid << " - " << iter->kolichestvo << std::endl;
