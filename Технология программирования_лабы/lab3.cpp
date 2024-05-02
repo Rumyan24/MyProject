@@ -1,14 +1,13 @@
-#include <iostream> // Подключение заголовочного файла библиотеки iostream, которая предоставляет функционал для ввода-вывода.
+#include <iostream>
+using namespace std;
 
-using namespace std; // Директива, позволяющая использовать элементы пространства имен std без указания префикса std::.
-
-class Point { // Объявление абстрактного класса Point, который будет базовым классом для других геометрических фигур.
+class Point {
 public:
-    virtual void draw() const = 0; // Чисто виртуальная функция draw, определяющая интерфейс для рисования объекта.
-    virtual void erase() const = 0; //  виртуальная функция erase, определяющая интерфейс для удаления изображения объекта с экрана.
-    virtual void move(double dx, double dy) = 0; //  виртуальная функция move для перемещения объекта на величины dx и dy.
-    virtual void rotate(double angle) = 0; // виртуальная функция rotate для вращения объекта на заданный угол angle.
-    virtual ~Point() {} // виртуальный деструктор, необходимый для корректного удаления производных объектов через базовый указатель.
+    virtual void draw() const = 0;
+    virtual void erase() const = 0;
+    virtual void move(double dx, double dy) = 0;
+    virtual void rotate(double angle) = 0;
+    virtual ~Point() {} // Виртуальный деструктор
 };
 
 class Line : public Point { // Класс Line, наследуемый от Point, представляющий линию.
