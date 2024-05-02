@@ -71,11 +71,12 @@ class Rhombus : public Square {
 protected:
     double angle;
 public:
-    Rhombus(double x, double y, double side, double angle) : Square(x, y, side), angle(angle) {}
+    Rhombus(double x, double y, double side, double angle) : Square(x, y, side), angle(angle), Rectangle(x, y, side, side) {} // Добавляем вызов конструктора Rectangle с нужными параметрами
     void draw() const override {
         cout << "Risuyu romb na (" << x << ", " << y << ") so storonoy " << width << " i uglom " << angle << " gradusov" << endl;
     }
 };
+
 
 int main() { // Главная функция программы, точка входа.
     Point* p = new Rhombus(10, 10, 15, 45); // Создание объекта Rhombus через указатель на базовый класс Point.
@@ -85,5 +86,5 @@ int main() { // Главная функция программы, точка в�
     p->erase(); // Вызов метода erase для удаления изображения ромба.
     delete p; // Освобождение выделенной памяти.
 
-    return 0; 
+    return 0;
 }
